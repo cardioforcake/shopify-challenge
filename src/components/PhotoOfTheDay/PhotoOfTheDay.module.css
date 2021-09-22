@@ -20,7 +20,7 @@
 .photoContainer{
   display: flex;
   justify-content: space-between;
-  background-color: rgb(95, 94, 94);
+  background-color: rgb(71, 71, 71);
   height: 100vh;
 }
 
@@ -29,7 +29,7 @@
   flex-direction: column;
   justify-content: flex-end;
   margin-left: 0.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 }
 
 .desc{
@@ -51,7 +51,7 @@
   transform: (90deg);
   width: 3rem;
   border-radius: 4px;
-  background-color: rgb(168, 168, 168);
+  background-color: rgb(199, 199, 199);
   margin-left: 0.25rem;
 }
 
@@ -74,4 +74,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+/* .heartContainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+} */
+.heart{
+  width: 3rem;
+  margin-left: 0.5rem;
+  margin-bottom: 2.5rem;
 }

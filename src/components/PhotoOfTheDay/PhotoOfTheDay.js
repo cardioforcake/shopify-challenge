@@ -14,7 +14,23 @@ function changeDate(value, set){
   }
 }
 
+function toggleLiked(set, l, date){
+  window.localStorage.setItem(date, l*-1);
+  set(prev=>prev*-1)
+}
+
 function PhotoOfTheDay(props){
+
+  const [liked, setLiked] = useState(-1);
+
+  useEffect(()=>{
+    if(window.localStorage.getItem(props.photo['date'])==='1'){
+      setLiked(1)
+    }else{
+      setLiked(-1)
+    }
+  },[props.photo['date']])
+
   return(
     <div className={styles.photoContainer}>
       <div className={styles.arrowContainer}>
@@ -38,7 +54,12 @@ function PhotoOfTheDay(props){
               {monthsNames[Number(props.photo['date'].substring(5,7))]+' '+Number(props.photo['date'].substring(8))+', '+props.photo['date'].substring(0,4)}
             </p>
           </div>
-          <input type="date" value="" className={styles.dateInput} onChange={(e)=>{changeDate(e.target.value, props.setSelectedDate)}}></input>
+          {liked === -1 ?
+            <img alt="empty heart" src="/heartwhite.png" className={styles.heart} onClick={()=>toggleLiked(setLiked, liked, props.photo['date'])}></img>:
+            <img alt="empty heart" src="/heartfilled.png" className={styles.heart} onClick={()=>toggleLiked(setLiked, liked, props.photo['date'])}></img>
+          }
+
+          <input type="datetime-local" value="" className={styles.dateInput} onChange={(e)=>{changeDate(e.target.value, props.setSelectedDate)}}></input>
         </div>
       </div>
       <div className={styles.arrowContainer}>

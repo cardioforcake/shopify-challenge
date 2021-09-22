@@ -28,7 +28,6 @@ async function getPhotos(url, setAry){
 
 function App() {
 
-  const [liked, setLiked] = useState('false');
   const [photoAry, setPhotoAry] = useState([{
     title: '',
     date: '',
@@ -72,13 +71,6 @@ function App() {
     }else{
       setEndDate(`${finalDate.getFullYear()}-${months[finalDate.getMonth()]}-${dates[finalDate.getDate()]}`);
     };
-    
-  
-    // getPhotos(`${API}${start}${startDate}&${end}${endDate}&${apiKey}`,setPhotoAry);
-    // console.log(`${API}${start}${startDate}&${end}${endDate}&${apiKey}`)
-    // console.log(startDate)
-    // console.log(endDate)
-
   },[selectedDate]);
 
   useEffect(()=>{
@@ -88,7 +80,7 @@ function App() {
 
   return (
     <div className="App">
-      <PhotoOfTheDay photo={photoAry[selectedPhoto]} setSelectedDate={setSelectedDate}/>
+      <PhotoOfTheDay photo={photoAry[selectedPhoto]} setSelectedDate={setSelectedDate} selectedDate={selectedDate}/>
     </div>
   );
 }
