@@ -1,6 +1,6 @@
 # Stan Chao | Shopify Intership Challenge
 
-[Deployed Website](stanchao-shopifychallenge.netlify.app)
+[Deployed Website](https://stanchao-shopifychallenge.netlify.app/)
 
 ### Features
 - The app will fetch the ten most recent photos from the NASA Astronomy Picture of the Day
