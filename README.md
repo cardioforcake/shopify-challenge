@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# Stan Chao | Shopify Intership Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Deployed Website](stanchao-shopifychallenge.netlify.app)
 
-## Available Scripts
+### Features
+- The app will fetch the ten most recent photos from the NASA Astronomy Picture of the Day
+- The user is able to navigate between the pictures starting with the oldest one.
+- The Astronomy Picture of the Day API does not provide the date the picture was captured so the date show on the app is the date that the related picture was featured by NASA.
+- The user is able to like pictures by clicking on the heart and unlike the same picture by clicking on the heart again. The heart changes colors depending on whether or not the "like" heart button has been selected.
 
-In the project directory, you can run:
+### Additional / Bonus Features
 
-### `npm start`
+- The user can select a new date using a drop down calendar. When a new date is selected, the app will fetch ten more pictures starting from the date that was selected and only up to the current date if the current date is less than ten days from the date selected.
+- The "liked" status of each photo is saved in the user's local storage and will be remembered across multiple browsing sessions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Future Improvements
+- Some of the daily photos are actually videos. As it was not required as part of the challenge, I did not embed the video onto the webpage. However, I did create a link that allows the user to naviate to www.youtube.com where the video is hosted.
+- Additional styling and animations
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Technologies Used
+- React + react-router-dom
+- Javascript
+- HTML
+- CSS
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
