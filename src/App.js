@@ -1,6 +1,8 @@
 import './App.css';
 import PhotoOfTheDay from './components/PhotoOfTheDay/PhotoOfTheDay';
+import LandingPage from './components/LandingPage/LandingPage'
 import {useEffect, useState} from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 const API = 'https://api.nasa.gov/planetary/apod?';
 const apiKey = 'api_key=YG0GDyH2Tbr0tHbPVrvNyLV8ADHoOsK1qMh1RleG';
@@ -75,12 +77,27 @@ function App() {
 
   useEffect(()=>{
     getPhotos(`${API}${start}${startDate}&${end}${endDate}&${apiKey}`,setPhotoAry);
-  },[startDate])
+  },[startDate, endDate])
 
 
   return (
     <div className="App">
-      <PhotoOfTheDay photo={photoAry[selectedPhoto]} setSelectedDate={setSelectedDate} selectedDate={selectedDate}/>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/photos">
+            <PhotoOfTheDay 
+              photo={photoAry[selectedPhoto]} 
+              setSelectedDate={setSelectedDate} 
+              selectedPhoto={selectedPhoto} 
+              setSelectedPhoto={setSelectedPhoto}
+              photoAryLengthMinusOne={photoAry.length-1}
+            />
+          </Route>
+          <Route path="/">
+            <LandingPage/>
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }

@@ -19,6 +19,14 @@ function toggleLiked(set, l, date){
   set(prev=>prev*-1)
 }
 
+function scrollLeft(set){
+  set(prev=>prev-1)
+}
+
+function scrollRight(set){
+  set(prev=>prev+1)
+}
+
 function PhotoOfTheDay(props){
 
   const [liked, setLiked] = useState(-1);
@@ -34,7 +42,10 @@ function PhotoOfTheDay(props){
   return(
     <div className={styles.photoContainer}>
       <div className={styles.arrowContainer}>
-
+        {props.selectedPhoto >0?
+          <div className={styles.arrowLeft} onClick={()=>{scrollLeft(props.setSelectedPhoto)}}></div>:
+          <></>
+        }
       </div>
       <div className={styles.card}>
         <div className={styles.interactionContainer}>
@@ -63,7 +74,10 @@ function PhotoOfTheDay(props){
         </div>
       </div>
       <div className={styles.arrowContainer}>
-
+        {props.selectedPhoto < props.photoAryLengthMinusOne ?
+          <div className={styles.arrowRight} onClick={()=>{scrollRight(props.setSelectedPhoto)}}></div>:
+          <></>
+        }
       </div>
     </div>
   )
