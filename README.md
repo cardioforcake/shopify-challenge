@@ -1,5 +1,7 @@
 # Stan Chao | Shopify Intership Challenge
 
+### Deployment
+
 [Deployed Website](https://stanchao-shopifychallenge.netlify.app/)
 
 ### Features
