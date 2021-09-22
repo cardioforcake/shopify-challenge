@@ -1,0 +1,77 @@
+#interactions{
+  writing-mode: vertical-rl;
+}
+
+.card{
+  display:flex;
+}
+
+.interactionContainer{
+  width: 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.arrowContainer{
+  width: 2rem;
+}
+
+.photoContainer{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(95, 94, 94);
+  height: 100vh;
+}
+
+.photoDesc{
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 0.5rem;
+  margin-bottom: 4rem;
+}
+
+.desc{
+  margin: 1rem 0 0 0;
+  text-align: left;
+  color: white;
+}
+
+#title{
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.photo{
+  max-height: 100vh;
+}
+
+.dateInput{
+  transform: (90deg);
+  width: 3rem;
+  border-radius: 4px;
+  background-color: rgb(168, 168, 168);
+  margin-left: 0.25rem;
+}
+
+.video{
+  width: 15vw;
+  height: 6rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 2rem;
+  border: solid 2px;
+  border-radius: 5px;
+  display:flex;
+  align-items: center;
+}
+
+.videoContainer{
+  height: 100%;
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
